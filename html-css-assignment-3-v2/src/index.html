@@ -6,60 +6,100 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Link Font google -->
+      <!-- Link Font Google -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,500&family=Source+Serif+Pro&family=Ubuntu+Condensed&display=swap"
-      rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 
       <!-- Link Font Awesome -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-      <!-- Link CSS -->
-      <link href="styles.css" rel="stylesheet">
+      <!-- Link Play CDN TailwindCSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+
+      <script>
+        tailwind.config = {
+         theme: {
+            extend: {
+               fontFamily: {
+                  rubik: ['Rubik'],
+               }
+            }
+         }
+        }
+      </script>
+
+      <style type="text/tailwindcss">
+      * {
+         border: 1px solid black;
+      }
+      </style>
    </head>
 
-   <body>
+   <body class=" bg-slate-400 ">
 
-      <header>
-         <h1>My Portfolio</h1>
-         <img src="../assets/myPhoto.png" width="15%">
-         <div class="logo-location">
-            <p><img src="../assets/logo/location.png" width="30px">Pangkalan-Kerinci, Riau, Indonesia.</p>
+      <header class="mb-2">
+         <h1 class="text-4xl  text-center font-bold py-2 
+                    font-rubik 
+                    bg-gradient-to-r from-rose-700
+                  to-black bg-clip-text text-transparent">My Portfolio</h1>
+
+         <img class="mx-auto w-72 rounded-full border-solid border-4 border-black drop-shadow-xl mb-2" src="../assets/myPhoto.png">
+
+         <div class="container">
+            <p><img class="block mx-auto w-7" src="../assets/logo/location.png">
+               <span class="block mx-auto text-center font-bold">Pangkalan-Kerinci, Riau, Indonesia.</span>
+            </p>
          </div>
       </header>
-
-      <nav>
-         <a href="#main"><i class="fa-regular fa-address-book"></i> About</a> |
-         <a href="mailto:eriqhbal@gmail.com"><i class="fa-solid fa-phone"></i> Contact</a> |
-         <a href="https://www.linkedin.com/in/zuleriqhbal-hendri-47170b205/"><i class="fa-brands fa-linkedin"></i>
-            Linkedin</a> |
-         <a href="https://www.instagram.com/eriqhbal/"><i class="fa-brands fa-instagram"></i> Instagram</a>
-      </nav>
+      
+      <!-- Navigasi -->
+      <div class="w-4/5 mx-auto my-auto bg-zinc-600 flex justify-evenly rounded-md drop-shadow-lg font-rubik">
+         <a class="group" href="#main">
+            <span class="group-hover:bg-slate-200"><i class="fa-regular fa-address-book"></i> About</span>
+         </a>|
+         <a class="group" href="mailto:eriqhbal@gmail.com">
+            <span class="group-hover:bg-slate-200"><span class="t"><i class="fa-solid fa-phone"></i> Contact</span></span>
+         </a> |
+         <a class="group" href="https://www.linkedin.com/in/zuleriqhbal-hendri-47170b205/">
+            <span class="group-hover:bg-slate-200"><i class="fa-brands fa-linkedin"></i> Linkedin</span>
+         </a> |
+         <a class="group" href="https://www.instagram.com/eriqhbal/">
+            <span class="group-hover:bg-slate-200"><i class="fa-brands fa-instagram"></i> Instagram</span>
+         </a>
+      </div>
+      
+   
 
       <!-- Introduce Myself -->
-      <section class="section-1">
-         <h1>Hello, Everyone</h1>
-         <h2>I'm Zuleriqhbal Hendri</h2>
-         <p>Perkenalkan saya Zuleriqhbal Hendri biasa orang orang manggil saya dengan sebutan eriqh.
-            Dan semoga kita bisa saling kenal dan menjadi teman baik.
-         </p>
-      </section>
+      <div class="mx-auto my-3 font-rubik">
+         <section class="w-2/3 mx-auto bg-slate-300 rounded-lg">
+            <h1 class="pl-3 text-2xl">Hello, Everyone</h1>
+            <h2 class="pl-3 text-xl">I'm Zuleriqhbal Hendri</h2>
+            <p class="p-5">Perkenalkan saya Zuleriqhbal Hendri biasa orang orang manggil saya dengan sebutan eriqh.
+               Dan semoga kita bisa saling kenal dan menjadi teman baik.
+            </p>
+         </section>
+      </div>
+
 
       <!-- Tentang Saya -->
-      <section class="section-2">
-         <h1>About Me</h1>
-         <div class="paragraph-section2">
-            <p>Saya adalah mahasiswa di universitas islam riau, di salahsatu universitas yang ada di kota pekanbaru.</p>
-            <p>saya saat ini sudah berusia 21 tahun dan saya sangat suka belajar hal baru, dan baru-baru ini saya sedang
-               proses mempelajari bahasa mandarin.</p>
-         </div>
-         <img src="../assets/duolingo.png" alt="duolingo-ui" width="25%">
-      </section>
-
-      <hr />
+      <div class="mx-auto my-4 font-rubik ">
+         <section class="bg-slate-300 w-3/4 mx-auto rounded-xl overflow-hidden shadow-lg shadow-zinc-800">
+            <h1 class="block text-center text-2xl">About Me</h1>
+            <div class="p-5 ">
+               <p >Saya adalah mahasiswa di universitas islam riau, di salahsatu universitas yang ada di kota pekanbaru.</p>
+               <p>saya saat ini sudah berusia 21 tahun dan saya sangat suka belajar hal baru, dan baru-baru ini saya sedang
+                  proses mempelajari bahasa mandarin.</p>
+            </div>
+            <img class="w-1/2 mx-auto my-auto" src="../assets/duolingo.png" alt="duolingo-ui">
+         </section>
+      </div>
 
       <!-- Kegiatan saat ini -->
+      <div>
+         
+      </div>
       <section class="section3">
          <h1>My Activity Right Now</h1>
          <ul class="ul-container">
@@ -203,15 +243,16 @@
 
       </main>
       <br>
+
       <form>
-         <h2>Contact Me</h2>
-         <label for="Name">Input Your Name :</label>
+         <h2 class=" text-center">Contact Me</h2>
+         <label class="block" for="Name"><span class="block text-sm font-medium text-slate-700">Input Your Name :</span></label>
          <input type="text" id="name" name="name"> <br>
-         <label for="Email">Input Your Email :</label>
+         <label class="block" for="Email"><span class="block text-sm font-medium text-slate-700">Input Your Email :</span></label>
          <input type="text" id="Email" name="Email"> <br>
-         <label for="phoneNumber">Your Phone Number :</label>
+         <label class="block" for="phoneNumber">Your Phone Number :</label>
          <input type="number" id="phoneNumber" name="phoneNumber"><br>
-         <label for="textMessage">Give Your Message :</label> <br>
+         <label class="block" for="textMessage">Give Your Message :</label> <br>
          <textarea rows="4" cols="50">Hello, I'am</textarea> <br>
          <button type="submit">Enter</button>
       </form>
