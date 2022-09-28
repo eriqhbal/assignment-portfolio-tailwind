@@ -27,13 +27,8 @@
             }
          }
         }
-      </script>
 
-      <style type="text/tailwindcss">
-      * {
-         
-      }
-      </style>
+      </script>
    </head>
 
    <body class=" bg-slate-400 ">
@@ -58,7 +53,8 @@
       </header>
       
       <!-- Navigasi -->
-      <div class="w-4/5 mx-auto my-auto bg-zinc-600 flex justify-evenly rounded-md font-rubik shadow-lg shadow-zinc-800">
+      <div class="w-4/5 mx-auto my-auto bg-zinc-600 flex justify-evenly 
+                  rounded-md font-rubik shadow-lg shadow-zinc-800 md:w-96">
          <a class="group" href="#main">
             <span class="group-hover:bg-slate-200"><i class="fa-regular fa-address-book"></i> About</span>
          </a>|
@@ -153,9 +149,10 @@
                My Biography
             </h2>
             <!-- Pengalaman -->
-            <div class="p-5">
+            <div class="p-5 md:block md:relative">
                <h3 class="font-bold text-center text-xl">Pengalaman Saya</h3>
-               <table class=" shadow-2xl shadow-zinc-800 rounded-lg overflow-hidden">
+               <table class=" shadow-2xl shadow-zinc-800 rounded-lg overflow-hidden
+                              md:mx-auto md:my-auto">
          
                   <thead class="text-zinc-900">
                      <tr class="bg-gray-700">
@@ -197,9 +194,10 @@
             </div>
           
             <!-- Pendidikan -->
-            <div class="p-5 mx-auto my-auto">
-               <h3 class="text-center font-bold text-black text-xl">Riwayat Pendidikan</h3>
-               <table class="shadow-2xl shadow-zinc-800 rounded-lg overflow-hidden">
+            <div class="p-5 mx-auto my-auto md:block md:relative ">
+
+               <h3 class="text-center font-bold text-black text-xl md:w-1/2 md:block md:mx-auto md:my-auto">Riwayat Pendidikan</h3>
+               <table class="shadow-2xl shadow-zinc-800 rounded-lg overflow-hidden md:mx-auto md:my-auto">
          
                   <thead class="text-zinc-900">
                      <tr class="bg-gray-700">
@@ -292,7 +290,7 @@
       </div>
 
       <footer class="mx-auto my-auto text-center py-6 bg-slate-900 text-white">
-         Copyright &copy; Zuleriqhbal Hendri
+         Copyright &copy; Zuleriqhbal Hendri - FE2690570
       </footer>
 
    </body>
